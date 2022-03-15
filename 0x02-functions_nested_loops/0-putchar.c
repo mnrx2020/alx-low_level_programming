@@ -1,18 +1,16 @@
-#include "main.h"
+#include <unistd.h>
+ * #ifndef MAIN_H
+ * #define MAIN_H
 /**
- * main - print _putchar followed by a new line
- * Return: Always 0 Success)
+ * _putcher - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main (void)
+int _putchar(char c)
 
 {
-	char *ch = "_putchar";
-
-	while (*ch)
-	{
-		_putchar(*ch);
-		ch++;
-	}
-	_putchar('\n);
-	return (0);
+	return (write(1, &c, 1));
 }
+#endif
