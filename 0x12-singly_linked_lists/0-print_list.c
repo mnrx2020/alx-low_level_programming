@@ -16,6 +16,7 @@ size_t print_list(const list_t *h)
 	{
 		printf("[%d] %s\n" , current->len,
 		current->str != NULL ? current->str : "(nil)");
+
 		current = current->next;
 		nbr_nodes++;
 	}
